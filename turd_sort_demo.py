@@ -3,27 +3,9 @@ array = [i for i in range(0, 10)]
 random.shuffle(array)
 sister = [None for i in range(0, len(array))]
 a = 0
-print("Would you like to sort the default array, "+str(array)+"?")
-print(" (type 'yes' to use it, or 'no' to define your own [in case you don't trust me])")
-da = input(" -> ")
 
-while da.lower()!="yes" and da.lower()!="no":
-    print("sorry, that prompt was not recognised.")
-    print("Would you like to use the array, "+str(array)+"?")
-    print(" (type 'yes' to use it, or 'no' to define your own)")
-    da = input(" -> ")
 
-if da.lower()=="no":
-    array = []
-    print("type an integer to add it to the list, or anything else to stop adding to the list")
-    while True:
-        iv = input(" -> ")
-        if (iv.startswith('-') and iv[1:].isdigit()) or (iv.isdigit()):
-            array.append(int(iv))
-        else:
-            break
-    print("your new array is: "+str(array)+".")
-    sister = [None for i in range(0, len(array))]
+print("Sorting: "+str(array)+".")
 print("")
 
 b = len(array)-1
@@ -63,6 +45,4 @@ while True:
         b -= 1
         d -= 1
 print("")
-print("your sorted array is: "+str(sister)+".")
-
-input("press any key to escape");
+print("Sorted: "+str(sister)+".")
